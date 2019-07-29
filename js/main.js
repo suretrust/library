@@ -17,6 +17,14 @@ function addBookToLibrary(title, author, pages, read) {
     display();
 }
 
+function removeBook(index){
+    let remove = document.getElementById("remove");
+    remove.remove();
+    myLibrary.splice(index, 1);
+    reset();
+    display();
+}
+
 function reset() {
     let tbody = document.getElementById('table-body');
     tbody.innerHTML = '';
@@ -31,8 +39,10 @@ function display() {
                         <td>${myLibrary[i].author}</td>
                         <td>${myLibrary[i].pages}</td>
                         <td class="btn btn-md"><button>${myLibrary[i].read}</button></td>
-                        <button id="remove" data-index-number="${i}">Remove</button>
+                        <td class="btn btn-md"><button onclick="removeBook()" id="remove" data-index-number="${i}">Remove</button></td>
+
                     </tr>`;
+
         let tbody = document.getElementById('table-body');
         tbody.innerHTML += body;
     }
@@ -48,15 +58,7 @@ document.getElementById('add').addEventListener("submit", (e) => {
 });
 
 
-let remove = document.getElementById("remove");
-let dataset = remove.dataset.indexNumber;
-console.log("dataset");
-document.getElementById("remove").addEventListener("click", function() {
-    let index = parseInt(remove.dataset.indexNumber);
-    myLibrary.splice(index, 1);
-    reset();
-    display();
-});
+
 
 // addBookToLibrary("First title", "First author", 23, true);
 // addBookToLibrary("First title", "First author", 23, true);
