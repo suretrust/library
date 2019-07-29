@@ -1,20 +1,10 @@
-{
-"parserOptions": { "ecmaVersion": 6 },
-"extends": ["airbnb", "plugin:react/recommended", "eslint:recommended"],
-"plugins": ["react"],
-"rules": {
-"indent": ["error", 4],
-"linebreak-style": ["error", "unix"],
-"quotes": ["error", "double"],
-"semi": ["error", "always"],
+---
+linters:
+    flake8:
+    eslint:
+    csslint:
 
-"comma-dangle": ["error", "always"],
-"no-cond-assign": ["error", "always"],
-
-"no-console": "off",
-},
-"globals": {
-"document": false,
-"window": true,
-}
-} 
+files:
+    ignore:
+        - 'src/generated/*'
+        - 'webroot/bower_components/*'
