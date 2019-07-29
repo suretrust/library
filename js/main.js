@@ -48,7 +48,11 @@ function display() {
     }
 }
 
+document.getElementById("add").style.display="none";
+
+
 document.getElementById('add').addEventListener("submit", (e) => {
+    
     e.preventDefault();
     let title = document.getElementById('title').value;
     let author = document.getElementById('author').value;
@@ -58,7 +62,12 @@ document.getElementById('add').addEventListener("submit", (e) => {
 });
 
 
-
+function formDisplay(elem){
+    if(elem == 1)
+        document.getElementById("add").style.display="none";
+    else
+        document.getElementById("add").style.display="block";
+}
 
 // addBookToLibrary("First title", "First author", 23, true);
 // addBookToLibrary("First title", "First author", 23, true);
