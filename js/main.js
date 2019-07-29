@@ -39,7 +39,7 @@ function display() {
                         <td>${myLibrary[i].author}</td>
                         <td>${myLibrary[i].pages}</td>
                         <td class="btn btn-md"><button>${myLibrary[i].read}</button></td>
-                        <td class="btn btn-md"><button onclick="removeBook()" id="remove" data-index-number="${i}">Remove</button></td>
+                        <td class="btn btn-md"><button onclick="removeBook(${i})" id="remove" data-index-number="${i}">Remove</button></td>
                     </tr>`;
 
         let tbody = document.getElementById('table-body');
