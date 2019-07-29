@@ -9,14 +9,22 @@ class Book {
     }
 }
 
-function createBook(title, author, pages, read){
-    const newBook = new Book(title, author, pages, read);
-    return newBook;
-}
 
-function addBookToLibrary(createBook(title, author, pages, read)) {
-  // add book to library array
+function addBookToLibrary(title, author, pages, read) {
+  const newBook = new Book(title, author, pages, read);
   myLibrary.push(newBook);
-  render()
+  display()
 }
 
+function display(){ 
+    myLibrary.forEach((book) => {
+        const title = document.createElement('span')
+        book.title;
+
+        book.author;
+        
+        book.pages;
+
+    })
+
+}
