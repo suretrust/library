@@ -1,4 +1,6 @@
-let myLibrary = []; // eslint-disable-next-line no-use-before-define
+/* eslint no-use-before-define: 0 */  // --> OFF
+
+let myLibrary = [];
 class Book {
     constructor(title, author, pages, read) {
         this.title = title;
